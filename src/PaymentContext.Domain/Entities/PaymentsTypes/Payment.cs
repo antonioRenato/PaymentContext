@@ -1,4 +1,4 @@
-﻿namespace PaymentContext.Domain.Entities
+﻿namespace PaymentContext.Domain.Entities.Payments
 {
     public abstract class Payment
     {
@@ -7,5 +7,9 @@
         public DateTime ExpireDate { get; set; }
         public decimal Total { get; set; }
         public decimal TotalPaid { get; set; }
+        public string Document { get; set; }
+        public string Payer { get; set; }
+        public string Address { get; set; }
+        public string Email { get; set; }
     }
 }
