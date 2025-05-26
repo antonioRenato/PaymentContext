@@ -18,7 +18,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\PaymentContext.Domain\PaymentContext.Domain.csproj" />
-    <ProjectReference Include="..\..\src\PaymentContext.Shared\PaymentContext.Shared.csproj" />
   </ItemGroup>
 
   <ItemGroup>

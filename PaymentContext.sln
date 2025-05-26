@@ -7,11 +7,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4141ED5D-59C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{BA6A4A22-7D3D-431F-83A5-B5A277D686AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentContext.Domain", "src\PaymentContext.Domain\PaymentContext.Domain.csproj", "{15ABDCC4-7AEB-4E46-9DE9-6E3C5D4546C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentContext.Domain", "src\PaymentContext.Domain\PaymentContext.Domain.csproj", "{15ABDCC4-7AEB-4E46-9DE9-6E3C5D4546C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentContext.Shared", "src\PaymentContext.Shared\PaymentContext.Shared.csproj", "{925D4564-049F-4AB1-9B68-D69C40D086B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentContext.Shared", "src\PaymentContext.Shared\PaymentContext.Shared.csproj", "{925D4564-049F-4AB1-9B68-D69C40D086B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentContext.Tests", "tests\PaymentContext.Tests\PaymentContext.Tests.csproj", "{24ACA396-8D81-4977-9661-0B60BE6077D0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentContext.Tests", "tests\PaymentContext.Tests\PaymentContext.Tests.csproj", "{D33D6639-71E9-41ED-B912-2C9A9DA4B93F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,10 +27,10 @@ Global
 		{925D4564-049F-4AB1-9B68-D69C40D086B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{925D4564-049F-4AB1-9B68-D69C40D086B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{925D4564-049F-4AB1-9B68-D69C40D086B2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{24ACA396-8D81-4977-9661-0B60BE6077D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{24ACA396-8D81-4977-9661-0B60BE6077D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{24ACA396-8D81-4977-9661-0B60BE6077D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{24ACA396-8D81-4977-9661-0B60BE6077D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D33D6639-71E9-41ED-B912-2C9A9DA4B93F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D33D6639-71E9-41ED-B912-2C9A9DA4B93F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D33D6639-71E9-41ED-B912-2C9A9DA4B93F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D33D6639-71E9-41ED-B912-2C9A9DA4B93F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,7 +38,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{15ABDCC4-7AEB-4E46-9DE9-6E3C5D4546C3} = {4141ED5D-59C6-454B-94C9-B6916B02F0D4}
 		{925D4564-049F-4AB1-9B68-D69C40D086B2} = {4141ED5D-59C6-454B-94C9-B6916B02F0D4}
-		{24ACA396-8D81-4977-9661-0B60BE6077D0} = {BA6A4A22-7D3D-431F-83A5-B5A277D686AF}
+		{D33D6639-71E9-41ED-B912-2C9A9DA4B93F} = {BA6A4A22-7D3D-431F-83A5-B5A277D686AF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C0503A95-A632-4A61-9946-D2208D5F1D4C}

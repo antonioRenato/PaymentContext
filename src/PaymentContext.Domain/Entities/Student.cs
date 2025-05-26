@@ -2,6 +2,14 @@
 {
     public class Student
     {
+        public Student(string firstName, string lastName, string document, string email)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            Document = document;
+            Email = email;
+        }
+
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Document {  get; set; }
