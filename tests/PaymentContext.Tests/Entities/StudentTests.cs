@@ -1,15 +1,62 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PaymentContext.Domain.Entities;
+﻿using PaymentContext.Domain.Entities;
+using PaymentContext.Domain.Entities.PaymentsTypes;
+using PaymentContext.Domain.Enums;
 using PaymentContext.Domain.ValueObjects;
 
 namespace PaymentContext.Tests.Entities
 {
-    [TestClass]
     public class StudentTests
     {
-        [TestMethod]
-        public void Test1()
+        private readonly Student _student;
+        private readonly Subscription _subscription;
+        private readonly Name _name;
+        private readonly Document _document;
+        private readonly Email _email;
+        private readonly Address _address;
+
+
+        public StudentTests()
         {
+            _name = new Name("Bruce", "Wayne");
+            _document = new Document("12345678909", EDocumentType.CPF);
+            _email = new Email("batman_dc@gmail.com");
+
+            _student = new Student(_name, _document, _email);
+            _address = new Address("Gotham", "Rua das Flores", "123", "Apt 1", "Bairro", "SP", "12345678");
+
+            _subscription = new Subscription(null);
+        }
+        
+        [Fact]
+        public void ShouldReturnErrorWhenHadActiveSubsctiption()
+        {
+            var payment = new PayPalPayment("123134213", DateTime.Now, DateTime.Now.AddDays(5), 
+                10, 10, _document, "wayne corp", _address, _email);
+            _subscription.AddPayment(payment);
+
+            _student.AddSubscription(_subscription);
+            _student.AddSubscription(_subscription);
+
+            Assert.True(_student.Invalid);
+        }
+
+        [Fact]
+        public void ShouldReturnErrorWhenHadNoPayment()
+        {
+            var name = new Name("Bruce", "Wayne");
+            var document = new Document("12345678909", EDocumentType.CPF);
+            var email = new Email("batman_dc@gmail.com");
+
+            var student = new Student(name, document, email);
+
+
+            Assert.False(true);
+        }
+
+        [Fact]
+        public void ShouldReturnSucessWhenHadNoActiveSubsctiption()
+        {
+            Assert.False(true);
         }
     }
 }
