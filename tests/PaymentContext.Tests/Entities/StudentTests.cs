@@ -41,22 +41,21 @@ namespace PaymentContext.Tests.Entities
         }
 
         [Fact]
-        public void ShouldReturnErrorWhenHadNoPayment()
+        public void ShouldReturnErrorWhenSubscriptionHasNoPayment()
         {
-            var name = new Name("Bruce", "Wayne");
-            var document = new Document("12345678909", EDocumentType.CPF);
-            var email = new Email("batman_dc@gmail.com");
-
-            var student = new Student(name, document, email);
-
-
-            Assert.False(true);
+            var subscription = new Subscription(null);
+            _student.AddSubscription(subscription);
+            Assert.True(_student.Invalid);
         }
 
         [Fact]
-        public void ShouldReturnSucessWhenHadNoActiveSubsctiption()
+        public void ShouldReturnSucessWhenAddSubsctiption()
         {
-            Assert.False(true);
+            var subscription = new Subscription(null);
+            var payment = new PayPalPayment("12345678", DateTime.Now, DateTime.Now.AddDays(5), 10, 10,_document, "WAYNE CORP", _address, _email);
+            subscription.AddPayment(payment);
+            _student.AddSubscription(subscription);
+            Assert.True(_student.Valid);
         }
     }
 }
